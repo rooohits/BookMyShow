@@ -7,47 +7,22 @@ import "./MovieFilter.css"
 const MovieFilter = () => {
   const navigate = useNavigate()
   const location = useLocation()
-  const queryParams = new URLSearchParams(location.search)
 
   const [filters, setFilters] = useState({
-    genre: queryParams.get("genre") || "",
-    language: queryParams.get("language") || "",
-    sort: queryParams.get("sort") || "releaseDate",
+    genre: "",
+    language: "",
+    sort: "releaseDate",
   })
 
   const genres = [
-    "Action",
-    "Adventure",
-    "Animation",
-    "Biography",
-    "Comedy",
-    "Crime",
-    "Documentary",
-    "Drama",
-    "Family",
-    "Fantasy",
-    "History",
-    "Horror",
-    "Music",
-    "Mystery",
-    "Romance",
-    "Sci-Fi",
-    "Sport",
-    "Thriller",
-    "War",
+    "Action", "Adventure", "Animation", "Biography", "Comedy", "Crime",
+    "Documentary", "Drama", "Family", "Fantasy", "History", "Horror",
+    "Music", "Mystery", "Romance", "Sci-Fi", "Sport", "Thriller", "War",
   ]
 
   const languages = [
-    "English",
-    "Hindi",
-    "Tamil",
-    "Telugu",
-    "Malayalam",
-    "Kannada",
-    "Bengali",
-    "Marathi",
-    "Punjabi",
-    "Gujarati",
+    "English", "Hindi", "Tamil", "Telugu", "Malayalam", "Kannada",
+    "Bengali", "Marathi", "Punjabi", "Gujarati",
   ]
 
   const sortOptions = [
@@ -70,30 +45,21 @@ const MovieFilter = () => {
   const applyFilters = () => {
     const params = new URLSearchParams()
 
-    if (filters.genre) {
-      params.set("genre", filters.genre)
-    }
+    if (filters.genre) params.set("genre", filters.genre)
+    if (filters.language) params.set("language", filters.language)
+    if (filters.sort) params.set("sort", filters.sort)
 
-    if (filters.language) {
-      params.set("language", filters.language)
-    }
-
-    if (filters.sort) {
-      params.set("sort", filters.sort)
-    }
-
-    // Preserve search query if exists
-    const search = queryParams.get("search")
-    if (search) {
-      params.set("search", search)
-    }
+    const currentParams = new URLSearchParams(location.search)
+    const search = currentParams.get("search")
+    if (search) params.set("search", search)
 
     navigate(`/?${params.toString()}`)
   }
 
   const clearFilters = () => {
-    // Preserve only search query if exists
-    const search = queryParams.get("search")
+    const currentParams = new URLSearchParams(location.search)
+    const search = currentParams.get("search")
+
     if (search) {
       navigate(`/?search=${search}`)
     } else {
@@ -107,8 +73,8 @@ const MovieFilter = () => {
     })
   }
 
-  // Update filters when URL changes
   useEffect(() => {
+    const queryParams = new URLSearchParams(location.search)
     setFilters({
       genre: queryParams.get("genre") || "",
       language: queryParams.get("language") || "",
