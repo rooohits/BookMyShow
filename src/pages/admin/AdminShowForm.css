@@ -1,0 +1,63 @@
+.admin-show-form {
+  padding: 20px;
+}
+
+.form-hint {
+  font-size: 12px;
+  color: var(--light-text);
+  margin-top: 5px;
+  font-style: italic;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.admin-card {
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.admin-card-header {
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--border-color);
+  background-color: #f9f9f9;
+}
+
+.admin-card-header h2 {
+  margin: 0;
+  font-size: 20px;
+  color: var(--secondary-color);
+}
+
+.admin-card-body {
+  padding: 20px;
+}
+
+.alert {
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.alert-error {
+  background-color: #ffebee;
+  color: #c62828;
+  border: 1px solid #ffcdd2;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 18px;
+  color: var(--primary-color);
+}
+

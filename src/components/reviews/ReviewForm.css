@@ -1,0 +1,75 @@
+.review-form-container {
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: var(--box-shadow);
+  margin-bottom: 30px;
+}
+
+.review-form-container h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.login-prompt {
+  padding: 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  color: var(--light-text);
+}
+
+.login-prompt a {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.rating-selector {
+  margin-bottom: 15px;
+}
+
+.rating-selector label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.star-rating {
+  display: flex;
+  gap: 5px;
+}
+
+.star-rating label {
+  cursor: pointer;
+}
+
+.star-rating input {
+  display: none;
+}
+
+.star-rating i {
+  font-size: 24px;
+  color: #ddd;
+  transition: color 0.2s ease;
+}
+
+.star-rating i.active {
+  color: #f5c518;
+}
+
+.star-rating label:hover i,
+.star-rating label:hover ~ label i {
+  color: #f5c518;
+}
+
+.review-form-container textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.review-form-container button {
+  margin-top: 10px;
+}

@@ -1,0 +1,66 @@
+.theater-card {
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: var(--box-shadow);
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.theater-info {
+  flex: 1;
+}
+
+.theater-name {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.theater-location {
+  font-size: 14px;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+}
+
+.theater-address {
+  font-size: 14px;
+  color: var(--light-text);
+  margin-bottom: 10px;
+}
+
+.theater-facilities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.facility-tag {
+  background-color: #f0f0f0;
+  color: var(--text-color);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.theater-actions {
+  margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+  .theater-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .theater-actions {
+    margin-left: 0;
+    margin-top: 15px;
+    width: 100%;
+  }
+
+  .theater-actions .btn {
+    width: 100%;
+  }
+}

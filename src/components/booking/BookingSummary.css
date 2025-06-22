@@ -1,0 +1,68 @@
+.booking-summary {
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: var(--box-shadow);
+}
+
+.booking-summary h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.summary-details {
+  margin-bottom: 20px;
+}
+
+.movie-details {
+  margin-bottom: 15px;
+}
+
+.movie-details h4 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.movie-details p {
+  font-size: 14px;
+  color: var(--light-text);
+  margin-bottom: 0;
+}
+
+.show-details,
+.seat-details {
+  margin-bottom: 15px;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.detail-value {
+  color: var(--light-text);
+}
+
+.total-amount {
+  padding-top: 15px;
+  border-top: 1px solid var(--border-color);
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.total-amount .detail-value {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .booking-summary {
+    padding: 15px;
+  }
+}

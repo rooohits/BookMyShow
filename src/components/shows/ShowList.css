@@ -1,0 +1,57 @@
+.show-list {
+  margin-bottom: 30px;
+}
+
+.no-shows {
+  padding: 30px;
+  text-align: center;
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  color: var(--light-text);
+}
+
+.theater-shows {
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: var(--box-shadow);
+  margin-bottom: 20px;
+}
+
+.theater-info {
+  margin-bottom: 15px;
+}
+
+.theater-info h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.theater-info p {
+  font-size: 14px;
+  color: var(--light-text);
+  margin-bottom: 0;
+}
+
+.show-times {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.show-time-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #f0f0f0;
+  color: var(--text-color);
+  border-radius: 4px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.show-time-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
