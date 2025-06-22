@@ -2,20 +2,12 @@
 import "./DateSelector.css"
 
 const DateSelector = ({ selectedDate, onDateChange }) => {
-  // Generate dates for the next 7 days
   const dates = Array.from({ length: 7 }, (_, i) => {
     const date = new Date()
     date.setDate(date.getDate() + i)
     return date
   })
 
-  // Format date for display
-  const formatDate = (date) => {
-    const options = { weekday: "short", day: "numeric", month: "short" }
-    return date.toLocaleDateString(undefined, options)
-  }
-
-  // Format date for API
   const formatDateForAPI = (date) => {
     return date.toISOString().split("T")[0]
   }
